@@ -1,5 +1,4 @@
 import React from 'react';
-import { comments } from './commentData';
 
 function Header(props) {
     return (

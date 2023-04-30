@@ -1,28 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
 import React from 'react';
 import { comments } from './commentData';
+import Card from './Card';
+
+// https://www.codecademy.com/journeys/full-stack-engineer/paths/fscj-22-front-end-development/tracks/fscj-22-react-part-ii/modules/wdcp-22-components-interacting-218cf398-22f2-4666-97bc-52d6789f0a78/projects/codey-overflow-forum
+// part 6
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <h2>Hello, there!</h2>
-      </header>
-    </div>
-  );
+     comments.map(comment =>
+      <Card commentObject={comment}/>)
+  )
+ 
 }
 
-export default App;
+export default App
